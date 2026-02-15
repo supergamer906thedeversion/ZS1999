@@ -9,4 +9,4 @@
 - **Graphics:** Intel Extreme Graphics 2 (integrated) or NVIDIA GeForce4 MX 4000 (discrete)
 - **Storage:** 20 GB IDE hard drive space
 - **Sound:** DirectX 9.0c compatible audio device
-- **Additional Notes:** Built for low-end 2005-era PCs; keyboard and mouse required
+- **Additional Notes:** keyboard and mouse required
