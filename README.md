@@ -1,12 +1,36 @@
 # ZS1999
 
-## System Requirements
+## C++ WASD Movement Script
 
-### Minimum
-- **OS:** Windows XP SP2 (32-bit)
-- **Processor:** Intel Celeron D 325 2.53 GHz or AMD Sempron 2200+
-- **Memory:** 256 MB DDR-266 RAM
-- **Graphics:** Intel Extreme Graphics 2 (integrated) or NVIDIA GeForce4 MX 4000 (discrete)
-- **Storage:** 20 GB IDE hard drive space
-- **Sound:** DirectX 9.0c compatible audio device
-- **Additional Notes:** keyboard and mouse required
+This repository includes `player_movement.cpp`, a simple player movement script that supports:
+
+- `W` / `A` / `S` / `D` directional movement
+- **Expansion:** sprint (`Shift` state)
+- **Expansion:** dash (`Space` press)
+- **Expansion:** acceleration/deceleration smoothing
+
+## Do I need to install expansions like CMake?
+
+**No.** You only need a C++ compiler with C++17 support (for example, `g++` or `clang++`).
+
+- The movement “expansions” (sprint/dash/smoothing) are already implemented in the `.cpp` file.
+- You do **not** need CMake to build this example.
+- CMake is optional and only useful if you want a larger multi-file project setup.
+
+### Build (no CMake)
+
+```bash
+g++ -std=c++17 -Wall -Wextra -pedantic player_movement.cpp -o player_movement
+```
+
+### Run
+
+```bash
+./player_movement
+```
+
+You can replace the demo loop with your own engine's input system by filling `InputState` each frame and calling:
+
+```cpp
+player.Update(deltaTime, input);
+```
